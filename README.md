@@ -300,31 +300,6 @@ GND      →  GND
     - Verify timeout safety feature works
     - Always have manual override capability
 
-## 📁 Recommended Folder Structure
-
-```bash
-RC_Car_Project/
-├── README.md
-├── transmitter/
-│   └── transmitter.ino
-├── receiver/
-│   └── receiver.ino
-├── images/
-│   ├── Transmitter-Diagram.jpg
-│   └── Receiver-Diagram.jpg
-├── datasheets/
-│   ├── nRF24L01_datasheet.pdf
-│   ├── L298N_datasheet.pdf
-│   └── AMS1117_datasheet.pdf
-```
-
-## 📸 Circuit Diagrams
-
-**Transmitter Circuit:**
-![Transmitter Diagram](Transmitter-Diagram.jpg)
-
-**Receiver Circuit:**
-![Receiver Diagram](Receiver-Diagram.jpg)
 
 ## Troubleshooting
 
