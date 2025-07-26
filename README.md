@@ -9,6 +9,9 @@ The system consists of two main components:
 1. **Transmitter**: Joystick controller that sends control signals
 2. **Receiver**: Car unit that receives signals and controls motors
 
+![final S1](https://github.com/user-attachments/assets/b511fd02-7b5f-40f8-a60a-d3ced4d2c677)
+
+
 ## 📦 Components Used
 
 ### Transmitter Side:
@@ -40,7 +43,9 @@ The system consists of two main components:
 - Arduino reads these values and sends them wirelessly using the **nRF24L01 module**.
 - On the receiver side, the Arduino receives the joystick values and maps them to **motor directions** via the **L298N motor driver**.
 - The car responds by moving **forward, backward, left, or right**.
-- Speed can be controlled using PWM on ENA and ENB pins.
+- Speed can be controlled using PWM on ENA and ENB pins
+
+https://github.com/user-attachments/assets/0fdb1f57-6eee-4a51-bf1a-645f71b8272b
 
 ## System Architecture
 
@@ -49,7 +54,9 @@ The system consists of two main components:
 - **Wireless Module**: nRF24L01 with external antenna
 - **Input Device**: Analog joystick (X and Y axis)
 - **Communication**: 2.4GHz wireless transmission
-- **Power Regulation**: 7805 (5V) + AMS1117 (3.3V for nRF24L01)
+- **Power Regulation**: 7805 (5V)
+
+
 
 ### 🔽 Receiver Unit
 - **Microcontroller**: Arduino Nano (5V, 16MHz)
@@ -57,7 +64,10 @@ The system consists of two main components:
 - **Motor Control**: L298N Motor Driver (or similar H-bridge)
 - **Motors**: 2x DC Geared Motors (Left and Right) - supports 4WD
 - **Safety Features**: Signal timeout protection
-- **Power System**: Buck converter + AMS1117 regulation
+- **Power System**: Buck converter + 7805 (5V)
+
+
+
 
 ## 📊 Circuit Diagram Analysis
 
@@ -83,6 +93,8 @@ The transmitter circuit includes:
   - 100µF capacitor stabilizes 7805 output
   - 10µF capacitor stabilizes AMS1117
 
+![Transmitter-Diagram](https://github.com/user-attachments/assets/967e7a2f-9b75-40aa-a292-6a3cb8b64e2c)
+
 ### 🔽 Receiver Circuit (Receiver-Diagram.jpg)
 The receiver circuit includes:
 - **Arduino Nano** as the main controller
@@ -107,6 +119,8 @@ The receiver circuit includes:
   - Buck converter provides 5V output to Arduino and Motor Driver logic
   - Motors powered directly from 12V
   - AMS1117 provides stable 3.3V for nRF24L01
+
+![Receiver-Diagram](https://github.com/user-attachments/assets/326e4c75-6427-405e-9491-51b6ea8664bb)
 
 ## Detailed Pin Connections
 
